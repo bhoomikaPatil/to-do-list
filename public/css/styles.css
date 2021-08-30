@@ -1,0 +1,6 @@
+body{
+    background-image: url("images/pattern-bg.png");
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+}
