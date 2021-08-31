@@ -1,9 +1,8 @@
 body{
-    background-image: url("images/pattern-bg.png");
-    background-repeat: no-repeat;
     min-height: 100vh;
     font-family: 'Rubik', sans-serif;
     display: flex;
+    flex-direction: column;
     align-items: center;
     text-align: center;
 }
@@ -31,6 +30,7 @@ h4{
 
 h1{
     color: white;
+    margin-top: 10px;
 }
 
 .Btn{
@@ -43,19 +43,23 @@ h1{
     bottom: 1.5px;
 }
 
-.container{
+.Container{
+    width: 100%;
+    background-image: url("images/pattern-bg.png");
+    background-repeat: no-repeat;
     align-self: flex-start;
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 30px;
-    margin: 20px auto;
+    padding: 20px auto;
+    height: 40vh;
 }
 
 
 .infoContainer{
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    padding: 30px 3px 30px 8px ;
+    padding: 20px 3px 20px 8px ;
     border-radius: 10px;
     background-color: white;
     display: grid;
@@ -77,3 +81,13 @@ h1{
     padding-right: 3px;
     text-align: left;
 }
+
+.cordinates{
+    display: none;
+}
+
+#map {
+    height: 60vh;
+    width: 100%;
+  }
+  
