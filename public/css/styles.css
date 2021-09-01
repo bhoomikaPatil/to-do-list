@@ -1,0 +1,110 @@
+/* GENERAL SELECTORS */
+body {
+    min-height: 100vh;
+    font-family: 'Rubik', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+p {
+    font-size: 20px;
+    color: hsl(0, 0%, 59%);
+    font-weight: 700;
+}
+
+h4 {
+    color: hsl(0, 0%, 17%);
+    font-weight: 700;
+}
+
+h1 {
+    color: white;
+    margin-top: 10px;
+}
+
+/* CLASS SELECTORS */
+/* CONTAINERS>> PAGE: HOME.EJS */
+.Container {
+    width: 100%;
+    background-image: url("images/pattern-bg.png");
+    background-repeat: no-repeat;
+    align-self: flex-start;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    padding: 20px auto;
+    min-height: 30vh;
+    position: relative;
+}
+
+.infoContainer {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 3px 20px 8px;
+    border-radius: 10px;
+    background-color: white;
+    display: grid;
+    grid-template-columns: 20% 30% 20% 30%;
+    column-gap: 5px;
+    font-size: 18px;
+    position: absolute;
+    bottom: -13vh;
+    z-index: 1;
+}
+
+#map {
+    min-height: 70vh;
+    width: 100%;
+    z-index: -1;
+}
+
+/* INPUT-FIELD SELECTORS */
+/* PAGE: HOME.EJS */
+.form-control {
+    display: inline-block;
+    width: 84%;
+    margin-right: 0%;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    border: none;
+    height: 40px;
+}
+
+.Btn {
+    border-bottom-left-radius: 0;
+    border-top-left-radius: 0;
+    width: 8%;
+    border: none;
+    height: 40px;
+    position: relative;
+    bottom: 1.5px;
+}
+/* CHILD CONTAINERS FOR INFO CONTAINERS */
+/* PAGE: HOME.EJS */
+.infoItem {
+    padding: 10px;
+    text-align: left;
+    border-right: solid 1px hsl(0, 0%, 59%);
+}
+
+.infoItemLast {
+    padding: 10px;
+    position: relative;
+    text-align: left;
+}
+
+/* CORDINATES CSS PAGE:HOME.EJS */
+.cordinates {
+    display: none;
+}
+
+/* CONTAINER PAGE: FAILURE.EJS */
+.failure {
+    height: 100vh;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}
