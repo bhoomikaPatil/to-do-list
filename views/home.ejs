@@ -5,6 +5,7 @@
     <input type="text" class="form-control" placeholder="Search for any IP address" aria-label="Enter a IP Address."
       name="ipEntered"><button class="Btn btn btn-dark" type="submit"><i class="fas fa-chevron-right"></i></button>
   </form>
+  <!-- Ip Info container -->
   <div class="infoContainer col-lg-8 col-md-11 col-11">
     <div class="infoItem ">
       <p>IP Address</p>
@@ -24,23 +25,31 @@
     </div>
   </div>
 </div>
+<!-- Div for rendering leaflet map -->
 <div id="map"></div>
+<!-- p classes to get lat, lng -->
 <p class="lat cordinates">lat: <%=ipInfo["cordinates"].lat%></p>
 <p class="lng cordinates">lng: <%=ipInfo["cordinates"].lng%></p>
+<!-- Leaflet JS -->
 <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
   integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
   crossorigin=""></script>
+  <!-- Jquery CDN -->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 <script>
+  // Access lat , lng values >> convert to float
   lat = parseFloat($(".lat").html().slice(5));
   lng = parseFloat($(".lng").html().slice(5));
+  // initialising new map
   var mymap = L.map('map').setView([lat, lng], 13);
+  // setting custom marker
   var markerIcon = L.divIcon({
     html: `<svg xmlns="http://www.w3.org/2000/svg" width="46" height="56"><path fill-rule="evenodd" d="M39.263 7.673c8.897 8.812 8.966 23.168.153 32.065l-.153.153L23 56 6.737 39.89C-2.16 31.079-2.23 16.723 6.584 7.826l.153-.152c9.007-8.922 23.52-8.922 32.526 0zM23 14.435c-5.211 0-9.436 4.185-9.436 9.347S17.79 33.128 23 33.128s9.436-4.184 9.436-9.346S28.21 14.435 23 14.435z"/></svg>`,
     className: "",
     iconSize: [46, 56],
     iconAnchor: [12, 40],
   });
+  // setting tilelayer >> using mapbox
   L.tileLayer(
     'https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoiaGltYW5zaHV1ZHVwaSIsImEiOiJja3N6dHFldmExeHBkMm90Y3F2bGZicWxhIn0.zRsuE9tND7ZuiBKkblka3w', {
       attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors, Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
@@ -50,6 +59,7 @@
       zoomOffset: -1,
       accessToken: "pk.eyJ1IjoiaGltYW5zaHV1ZHVwaSIsImEiOiJja3N6dHFldmExeHBkMm90Y3F2bGZicWxhIn0.zRsuE9tND7ZuiBKkblka3w"
     }).addTo(mymap);
+    // adding marker to map
   var marker = L.marker([lat, lng], {
     icon: markerIcon
   }).addTo(mymap);
