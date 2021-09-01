@@ -1,4 +1,4 @@
-body{
+body {
     min-height: 100vh;
     font-family: 'Rubik', sans-serif;
     display: flex;
@@ -7,7 +7,7 @@ body{
     text-align: center;
 }
 
-.form-control{
+.form-control {
     display: inline-block;
     width: 84%;
     margin-right: 0%;
@@ -17,23 +17,23 @@ body{
     height: 40px;
 }
 
-p{
+p {
     font-size: 20px;
     color: hsl(0, 0%, 59%);
     font-weight: 700;
 }
 
-h4{
-    color:  hsl(0, 0%, 17%);
+h4 {
+    color: hsl(0, 0%, 17%);
     font-weight: 700;
 }
 
-h1{
+h1 {
     color: white;
     margin-top: 10px;
 }
 
-.Btn{
+.Btn {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
     width: 8%;
@@ -43,7 +43,7 @@ h1{
     bottom: 1.5px;
 }
 
-.Container{
+.Container {
     width: 100%;
     background-image: url("images/pattern-bg.png");
     background-repeat: no-repeat;
@@ -53,13 +53,13 @@ h1{
     align-items: center;
     gap: 30px;
     padding: 20px auto;
-    height: 40vh;
+    height: 42vh;
 }
 
 
-.infoContainer{
-    box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
-    padding: 20px 3px 20px 8px ;
+.infoContainer {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    padding: 20px 3px 20px 8px;
     border-radius: 10px;
     background-color: white;
     display: grid;
@@ -68,26 +68,33 @@ h1{
     font-size: 18px;
 }
 
-.infoItem{
+.infoItem {
     padding-left: 5px;
     padding-right: 3px;
     text-align: left;
     border-right: solid 1px hsl(0, 0%, 59%);
 }
 
-.infoItemLast{
+.infoItemLast {
     padding-left: 5px;
     position: relative;
     padding-right: 3px;
     text-align: left;
 }
 
-.cordinates{
+.cordinates {
     display: none;
 }
 
 #map {
-    height: 60vh;
+    height: 56vh;
     width: 100%;
-  }
-  
+}
+
+.failure {
+    height: 100vh;
+    display: flex;
+    text-align: left;
+    align-items: center;
+    justify-content: center;
+}

@@ -54,5 +54,14 @@ app.get("/", (req, res) => {
 });
 app.post("/", (req, res) => {
     ipAddress = req.body.ipEntered;
+    if(ipAddress === ""){
+        res.render("failure");
+    }
+    else{
+        res.redirect("/");
+    }
+});
+
+app.post("/failure", (req,res)=>{
     res.redirect("/");
 });
