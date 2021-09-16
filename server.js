@@ -1,4 +1,5 @@
 // jshint esversion: 6
+require("dotenv").config();
 const express = require("express");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
@@ -21,7 +22,7 @@ app.listen(3000, () => {
 // actions for get at home route
 app.get("/", (req, res) => {
     // making url for request to api server
-    const api_key = "at_8NyQVzQfhXktHpx7UsBQ6oQLXyKEH";
+    const api_key = process.env.API_KEY;
     const api_url = 'https://geo.ipify.org/api/v1?';
     let url = "";
     if (ipAddress === "") {
