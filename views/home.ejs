@@ -1,7 +1,7 @@
 <%- include("partials/header.ejs") %>
 <div class="Container">
   <h1>IP Address Tracker</h1>
-  <form action="/" method="POST" class="col-lg-5">
+  <form action="/" method="POST" class="col-lg-6 col-md-7 col-sm-9 col-9">
     <input type="text" class="form-control" placeholder="Search for any IP address" aria-label="Enter a IP Address."
       name="ipEntered"><button class="Btn btn btn-dark" type="submit"><i class="fas fa-chevron-right"></i></button>
   </form>
@@ -11,14 +11,17 @@
       <p>IP Address</p>
       <h4><%=ipInfo["ip"]%></h4>
     </div>
-    <div class="infoItem ">
+    <!-- <hr> -->
+    <div class="infoItem location">
       <p>Location</p>
       <h4><%=ipInfo["location"]%></h4>
     </div>
+    <!-- <hr> -->
     <div class="infoItem ">
       <p>Timezone</p>
       <h4>UTC <span><%=ipInfo["timezone"]%></span></h4>
     </div>
+    <!-- <hr> -->
     <div class="infoItemLast">
       <p>ISP</p>
       <h4><%=ipInfo["isp"]%></h4>
@@ -26,7 +29,9 @@
   </div>
 </div>
 <!-- Div for rendering leaflet map -->
-<div id="map"></div>
+<div class="map-container">
+  <div id="map"></div>
+</div>
 <!-- p classes to get lat, lng -->
 <p class="lat cordinates">lat: <%=ipInfo["cordinates"].lat%></p>
 <p class="lng cordinates">lng: <%=ipInfo["cordinates"].lng%></p>
